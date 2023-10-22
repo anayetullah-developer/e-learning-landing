@@ -1,29 +1,74 @@
-'use client';
-
-import { Button, Navbar } from 'flowbite-react';
+import { Navbar } from "flowbite-react";
+import { PiPaperPlaneTiltFill } from "react-icons/pi";
+import { BsPerson } from "react-icons/bs";
+import { IoCartOutline } from "react-icons/io5";
+import { NavLink } from "react-router-dom";
 
 export default function NavbarWithCTAButton() {
   return (
-    <Navbar fluid rounded>
-      <Navbar.Brand href="https://flowbite-react.com">
-        <img src="/favicon.svg" className="mr-3 h-6 sm:h-9" alt="Flowbite React Logo" />
-        <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Flowbite React</span>
-      </Navbar.Brand>
+    <Navbar rounded>
+      <div className="flex items-center gap-2 text-3xl">
+        <PiPaperPlaneTiltFill className="text-[#26C468]"/>
+        <div className="brand-logo text-2xl font-bold  tracking-wider">E-Coaching</div>
+      </div>
       <div className="flex md:order-2">
-        <Button>Get started</Button>
+        <div className="flex gap-8 items-center text-2xl">
+          <IoCartOutline/>
+        <button
+          type="button"
+          className="flex items-center gap-1 py-2.5 px-3 mr-2 mb-2 text-sm font-medium text-white focus:outline-none  bg-[#26C468] rounded border border-[#26C468] hover:bg-[#3b9c64] hover:text-white"
+        >
+          <BsPerson className="text-lg" />
+          <div>Login / Register</div>
+        </button>
+        </div>
+
         <Navbar.Toggle />
       </div>
       <Navbar.Collapse>
-        <Navbar.Link href="#" active>
+        <NavLink
+          to="/"
+          className={({ isActive }) => (isActive ? "text-[#26C468]" : "")}
+        >
           Home
-        </Navbar.Link>
-        <Navbar.Link href="#">About</Navbar.Link>
-        <Navbar.Link href="#">Services</Navbar.Link>
-        <Navbar.Link href="#">Pricing</Navbar.Link>
-        <Navbar.Link href="#">Contact</Navbar.Link>
+        </NavLink>
+        <NavLink
+          to="/services"
+          className={({ isActive }) => (isActive ? "text-[#26C468]" : "")}
+        >
+          Services
+        </NavLink>
+        <NavLink
+          to="#"
+          className={({ isActive }) =>
+            isActive
+              ? "navlink me-md-4 mb-md-0 mb-2 text-primary"
+              : "navlink me-md-4 mb-md-0 mb-2 text-dark"
+          }
+        >
+          Popular Courses
+        </NavLink>
+        <NavLink
+          to="#"
+          className={({ isActive }) =>
+            isActive
+              ? "navlink me-md-4 mb-md-0 mb-2 text-primary"
+              : "navlink me-md-4 mb-md-0 mb-2 text-dark"
+          }
+        >
+          Top Selling Courses
+        </NavLink>
+        <NavLink
+          to="#"
+          className={({ isActive }) =>
+            isActive
+              ? "navlink me-md-4 mb-md-0 mb-2 text-primary"
+              : "navlink me-md-4 mb-md-0 mb-2 text-dark"
+          }
+        >
+          All Courses
+        </NavLink>
       </Navbar.Collapse>
     </Navbar>
-  )
+  );
 }
-
-
