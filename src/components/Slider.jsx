@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Virtual, Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -18,10 +18,22 @@ import DiscountCard from './CourseCard';
 const Slider = () => {
     const [setSwiperRef] = useState(null);
     // Create array with 500 slides
-    const [slides] = useState(
-      Array.from({ length: 12 }).map((_, index) => `Slide ${index + 1}`)
-    );
-  
+    const [jsonData, setJsonData] = useState([]);
+    console.log(jsonData);
+
+  useEffect(() => {
+    // Make a GET request to fetch JSON data
+    fetch('../../public/data/courseData.json')
+      .then(response => response.json())
+      .then(data => {
+        // Update the state with the JSON data
+        setJsonData(data);
+      })
+      .catch(error => {
+        // Handle any errors here
+        console.error('Error:', error);
+      });
+  }, []); 
    
   return (
     <div>
@@ -30,16 +42,13 @@ const Slider = () => {
         onSwiper={setSwiperRef}
         slidesPerView={4}
         centeredSlides={false}
-        spaceBetween={30}
-        pagination={{
-          type: 'fraction',
-        }}
+        spaceBetween={25}
         navigation={true}
         virtual
       >
-        {slides.map((index) => (
+        {jsonData.map((item, index) => (
           <SwiperSlide key={index} virtualIndex={index}>
-            <DiscountCard/>
+            <DiscountCard key={index} course={item}/>
           </SwiperSlide>
         ))}
       </Swiper>

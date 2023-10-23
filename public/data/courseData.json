@@ -1,0 +1,99 @@
+[
+    {
+      "imgUrl": "https://i.ibb.co/xL9gRf5/meeting.jpg",
+      "discountPercentage": 30,
+      "authorImg": "https://example.com/author1-image.jpg",
+      "authorName": "Alice Smith",
+      "rating": 4.7,
+      "courseName": "Advanced JavaScript",
+      "lessonNumber": 30,
+      "videoDuration": "15 hr 30 min",
+      "studentNumber": 1500,
+      "classNumber": 30
+    },
+    {
+      "imgUrl": "https://i.ibb.co/r7xg2yF/pc.jpg",
+      "discountPercentage": 25,
+      "authorImg": "https://example.com/author2-image.jpg",
+      "authorName": "Bob Johnson",
+      "rating": 4.5,
+      "courseName": "Machine Learning Basics",
+      "lessonNumber": 25,
+      "videoDuration": "13 hr 45 min",
+      "studentNumber": 1200,
+      "classNumber": 28
+    },
+    {
+      "imgUrl": "https://i.ibb.co/0Y7p2kX/ai.jpg",
+      "discountPercentage": 20,
+      "authorImg": "https://example.com/author3-image.jpg",
+      "authorName": "Eve Adams",
+      "rating": 4.6,
+      "courseName": "Web Development Fundamentals",
+      "lessonNumber": 28,
+      "videoDuration": "14 hr 20 min",
+      "studentNumber": 1300,
+      "classNumber": 26
+    },
+    {
+      "imgUrl": "https://i.ibb.co/d7CjkCh/group-work.jpg",
+      "discountPercentage": 15,
+      "authorImg": "https://example.com/author4-image.jpg",
+      "authorName": "David Lee",
+      "rating": 4.4,
+      "courseName": "Python Programming",
+      "lessonNumber": 24,
+      "videoDuration": "12 hr 15 min",
+      "studentNumber": 1100,
+      "classNumber": 24
+    },
+    {
+      "imgUrl": "https://i.ibb.co/xL9gRf5/meeting.jpg", 
+      "discountPercentage": 35,
+      "authorImg": "https://example.com/author5-image.jpg",
+      "authorName": "Grace Taylor",
+      "rating": 4.8,
+      "courseName": "Data Science Essentials",
+      "lessonNumber": 22,
+      "videoDuration": "13 hr 40 min",
+      "studentNumber": 1400,
+      "classNumber": 27
+    },
+    {
+      "imgUrl": "https://i.ibb.co/r7xg2yF/pc.jpg", 
+      "discountPercentage": 28,
+      "authorImg": "https://example.com/author6-image.jpg",
+      "authorName": "Frank Johnson",
+      "rating": 4.7,
+      "courseName": "Mobile App Development",
+      "lessonNumber": 26,
+      "videoDuration": "14 hr 10 min",
+      "studentNumber": 1250,
+      "classNumber": 29
+    },
+    {
+      "imgUrl": "https://i.ibb.co/0Y7p2kX/ai.jpg", 
+      "discountPercentage": 22,
+      "authorImg": "https://example.com/author7-image.jpg",
+      "authorName": "Sarah Davis",
+      "rating": 4.5,
+      "courseName": "Artificial Intelligence",
+      "lessonNumber": 23,
+      "videoDuration": "12 hr 30 min",
+      "studentNumber": 1150,
+      "classNumber": 25
+    },
+    {
+      "imgUrl": "https://i.ibb.co/d7CjkCh/group-work.jpg", 
+      "discountPercentage": 18,
+      "authorImg": "https://example.com/author8-image.jpg",
+      "authorName": "Michael Brown",
+      "rating": 4.6,
+      "courseName": "Digital Marketing Strategy",
+      "lessonNumber": 27,
+      "videoDuration": "13 hr 50 min",
+      "studentNumber": 1350,
+      "classNumber": 26
+    }
+  ]
+  

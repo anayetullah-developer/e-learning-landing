@@ -1,6 +1,6 @@
 import { Navbar } from "flowbite-react";
 import { PiPaperPlaneTiltFill } from "react-icons/pi";
-import { BsPerson } from "react-icons/bs";
+import { GoPerson } from "react-icons/go";
 import { IoCartOutline } from "react-icons/io5";
 import { NavLink } from "react-router-dom";
 
@@ -9,23 +9,23 @@ export default function NavbarWithCTAButton() {
     <Navbar rounded>
       <div className="flex items-center gap-2 text-3xl">
         <PiPaperPlaneTiltFill className="text-[#26C468]"/>
-        <div className="brand-logo text-2xl font-bold  tracking-wider">E-Coaching</div>
+        <div className="brand-logo text-xl font-bold text-[#333333]  tracking-wider">E-Coaching</div>
       </div>
       <div className="flex md:order-2">
-        <div className="flex gap-8 items-center text-2xl">
+        <div className="flex gap-8 items-center text-2xl cursor-pointer">
           <IoCartOutline/>
         <button
           type="button"
-          className="flex items-center gap-1 py-2.5 px-3 mr-2 mb-2 text-sm font-medium text-white focus:outline-none  bg-[#26C468] rounded border border-[#26C468] hover:bg-[#3b9c64] hover:text-white"
+          className="flex items-center gap-1 py-1.5 px-3 mr-2 mb-2 text-white focus:outline-none  bg-[#26C468] rounded border border-[#26C468] hover:bg-[#3b9c64] hover:text-white"
         >
-          <BsPerson className="text-lg" />
-          <div>Login / Register</div>
+          <GoPerson className="text-base" />
+          <div className="text-base">Login / Register</div>
         </button>
         </div>
 
         <Navbar.Toggle />
       </div>
-      <Navbar.Collapse>
+      <Navbar.Collapse className="text-gray-500">
         <NavLink
           to="/"
           className={({ isActive }) => (isActive ? "text-[#26C468]" : "")}
