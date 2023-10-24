@@ -20,7 +20,7 @@ const DiscountCard = ({course}) => {
           <AiOutlineHeart/>
         </div>
         <div className="absolute bottom-2 right-2 text-base font-semibold bg-white text-yellow-400 py-1 px-3 rounded">
-          {discountPercentage}
+          {discountPercentage}%
         </div>
       </div>
       <div className="p-4">

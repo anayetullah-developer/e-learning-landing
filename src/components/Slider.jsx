@@ -18,8 +18,7 @@ import DiscountCard from './CourseCard';
 const Slider = () => {
     const [setSwiperRef] = useState(null);
     // Create array with 500 slides
-    const [jsonData, setJsonData] = useState([]);
-    console.log(jsonData);
+    const [courseData, setCourseData] = useState([]);
 
   useEffect(() => {
     // Make a GET request to fetch JSON data
@@ -27,7 +26,7 @@ const Slider = () => {
       .then(response => response.json())
       .then(data => {
         // Update the state with the JSON data
-        setJsonData(data);
+        setCourseData(data);
       })
       .catch(error => {
         // Handle any errors here
@@ -46,7 +45,7 @@ const Slider = () => {
         navigation={true}
         virtual
       >
-        {jsonData.map((item, index) => (
+        {courseData.map((item, index) => (
           <SwiperSlide key={index} virtualIndex={index}>
             <DiscountCard key={index} course={item}/>
           </SwiperSlide>
